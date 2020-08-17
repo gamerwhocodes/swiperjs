@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>SWIPERJS</title>
+</head>
+
+<style>
+    body {
+        background: rgb(255, 255, 255);
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .swiper-container {
+        width: 100%;
+        height: 100vh;
+        padding-top: 150px;
+        padding-bottom: 50px;
+        background: linear-gradient( #000000, #434343);
+        z-index: 0;
+    }
+    
+    .swiper-slide {
+        background-position: center;
+        width: 300px;
+        height: 380px;
+        background-color: rgb(255, 255, 255);
+        -webkit-box-shadow: -2px 2px 20px -2px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -2px 2px 20px -2px rgba(0, 0, 0, 0.75);
+        box-shadow: -2px 2px 20px -2px rgba(0, 0, 0, 0.75);
+        border-radius: 5px;
+    }
+    
+    .swiper-slide .imgBx {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .swiper-slide .imgBx img {
+        width: 100%;
+    }
+    
+    .swiper-slide .details {
+        box-sizing: border-box;
+        font-size: 20px;
+        padding: 20px;
+        transform: rotate(90);
+        color: black;
+        font-style: normal;
+        line-height: 20px;
+    }
+    
+    .swiper-slide .details h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    
+    .swiper-slide .details span {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        text-transform: capitalize;
+    }
+    
+    .swiper-slide .details a {
+        text-decoration: none;
+        text-align: center;
+        color: #000000;
+        border: 2px solid black;
+        padding: 0.7em;
+        font-size: 0.7em;
+        /* border-radius: 5px; */
+        align-items: center;
+        font-family: 'Roboto', serif;
+        margin-left: 25%;
+    }
+    
+    .swiper-slide .details a:hover {
+        padding: 0.75em;
+        font-size: 0.75em;
+        background-color: black;
+        border: 3px solid white;
+        transition: 0.5s ease-in-out;
+        color: white;
+    }
+</style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?cs=srgb&dl=pexels-sharon-mccutcheon-1209843.jpg&fm=jpg">
+                </div>
+                <div class="details">
+                    <h3>Section 1</h3><span> Relevant details  </span>
+                    <br><br><br>
+                    <a style="text-align: center;">SEE MORE</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="https://images.pexels.com/photos/6224/hands-people-woman-working.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                </div>
+                <div class="details">
+                    <h3>Section 2</h3><span> Relevant details  </span>
+                    <br><br><br>
+                    <a>SEE MORE</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="https://images.pexels.com/photos/374054/pexels-photo-374054.jpeg?cs=srgb&dl=pexels-burst-374054.jpg&fm=jpg">
+                </div>
+                <div class="details">
+                    <h3>Section 3</h3><span> Relevant details  </span>
+                    <br><br><br>
+                    <a>SEE MORE</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                </div>
+                <div class="details">
+                    <h3>Section 4</h3><span> Relevant details  </span>
+                    <br><br><br>
+                    <a>SEE MORE</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="https://images.pexels.com/photos/1053687/pexels-photo-1053687.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                </div>
+                <div class="details">
+                    <h3>Section 5</h3><span> Relevant details  </span>
+                    <br><br><br>
+                    <a>SEE MORE</a>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+</body>
+
+</html>
